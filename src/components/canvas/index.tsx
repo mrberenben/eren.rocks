@@ -74,15 +74,17 @@ const Canvas = (props: CanvasProps) => {
         </span>
       )}
       {props.shuffle && (
-        <Image
-          src={Images.shuffle[imageIndex]}
-          alt="Who is this guy?"
-          layout="fill"
-          objectFit="cover"
-          priority={true}
-          quality={100}
-          style={{ opacity: 0.8 }}
-        />
+        <div className={styles.shuffle}>
+          <Image
+            src={Images.shuffle[imageIndex]}
+            alt="Who is this guy?"
+            layout="fill"
+            objectFit="cover"
+            priority={true}
+            quality={100}
+            style={{ opacity: 0.7 }}
+          />
+        </div>
       )}
       {props.children}
     </div>
