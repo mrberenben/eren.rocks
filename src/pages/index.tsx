@@ -10,6 +10,9 @@ import Header from "@/components/layout/header";
 import Button from "@/components/button";
 import Canvas from "@/components/canvas";
 
+// config
+import { Tech } from "@/utils/config/tech";
+
 const Home: NextPage = () => {
   return (
     <div className={styles.app}>
@@ -22,7 +25,7 @@ const Home: NextPage = () => {
         />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         />
         <meta name="theme-color" content="#fff" />
         <link rel="icon" href="/favicon.ico" />
@@ -52,7 +55,26 @@ const Home: NextPage = () => {
 
         <section className={styles.section_technologies}>
           <Canvas shuffle={false} rainbow={false} noise={true} stripes={true}>
-            <h4>Technologies i use</h4>
+            <div className={styles.canvas_container}>
+              <h4>Technologies i use</h4>
+              <h6>I'll never stop learning.</h6>
+
+              <div className={styles.tech_grid}>
+                {Tech.map(t => (
+                  <div key={t.id} className={styles.tech_grid_card}>
+                    <span className={styles.tech_grid_card__badge}>
+                      {t.experience}
+                    </span>
+                    <div className={styles.tech_grid_card__image}>
+                      <Image src={t.image} alt={t.title} />
+                    </div>
+                    <div className={styles.tech_grid_card__title}>
+                      {t.title}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </Canvas>
         </section>
       </main>

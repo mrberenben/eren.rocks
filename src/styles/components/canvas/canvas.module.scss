@@ -4,10 +4,10 @@
 
   position: relative;
   display: flex;
+  flex-direction: column;
 
   inline-size: 100%;
   block-size: 100%;
-  max-block-size: 568px;
 
   border: 4px solid #000;
   border-radius: var(--misc-radius-m);
@@ -32,9 +32,17 @@
     user-select: none;
   }
 
+  & .shuffle {
+    position: absolute;
+    inline-size: 100%;
+    block-size: 0;
+
+    padding-bottom: 92.25%;
+  }
+
   & .stripes {
     position: absolute;
-    top: 50%;
+    top: 100%;
     left: 50%;
 
     inline-size: 300%;
