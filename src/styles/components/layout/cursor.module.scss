@@ -1,0 +1,12 @@
+.cursor {
+  --pointer-position-x: 0;
+  --pointer-position-y: 0;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  will-change: top, left;
+  pointer-events: none;
+  z-index: 100;
+}
