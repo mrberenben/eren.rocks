@@ -1,0 +1,115 @@
+.app {
+  display: flex;
+  flex-direction: column;
+
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  padding: max(16px, 3.166666667vw);
+  min-block-size: 100%;
+
+  & section {
+    display: flex;
+    flex-direction: column;
+
+    inline-size: 100%;
+    padding-block: 3rem;
+  }
+}
+
+.section_banner {
+  flex-flow: row wrap !important;
+  align-items: stretch;
+  justify-content: space-between;
+
+  gap: 3rem;
+  block-size: 100%;
+
+  & .section_banner_left {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    & h1 {
+      font-size: 4.666667vw;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: -0.15vw;
+      line-height: 1.15;
+      color: #000;
+    }
+
+    & h2 {
+      font-size: 4vw;
+      font-weight: 300;
+      text-transform: uppercase;
+      line-height: 1.15;
+    }
+
+    & p {
+      max-inline-size: 600px;
+
+      font-size: 1.46vw;
+      line-height: 1.25;
+      text-transform: uppercase;
+
+      margin-block: 5rem 2rem;
+
+      background-color: rgb(var(--colors-green));
+    }
+  }
+
+  & .section_banner_right {
+    display: flex;
+    flex: 1;
+
+    & h3 {
+      position: absolute;
+      top: 2rem;
+      left: 50%;
+
+      display: flex;
+      inline-size: max-content;
+
+      color: rgb(var(--color));
+      font-size: 4.94vw;
+      font-weight: bold;
+      font-family: "Tusker Grotesk 6";
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: 0.0789473684em 0.0789473684em 0 #000;
+      -webkit-text-stroke-width: 0.0421052632em;
+      -webkit-text-stroke-color: #000;
+
+      transform: translate3d(-50%, 0, 0);
+
+      z-index: 2;
+    }
+  }
+}
+
+.section_technologies {
+  & h4 {
+    display: flex;
+    justify-content: center;
+
+    margin: 3rem auto;
+
+    color: #fff;
+    font-size: 4.94vw;
+    font-weight: normal;
+    font-family: "Tusker Grotesk 8";
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0.0789473684em 0.0789473684em 0 #000;
+    -webkit-text-stroke-width: 0.0421052632em;
+    -webkit-text-stroke-color: #000;
+
+    z-index: 2;
+  }
+}

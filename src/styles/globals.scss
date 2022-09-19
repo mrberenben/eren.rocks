@@ -1,12 +1,15 @@
-@import "./fonts.css";
-@import "./variables.css";
+@import "./fonts.scss";
+@import "./variables.scss";
 
 ::-webkit-scrollbar {
   display: none;
 }
 
+::selection {
+  background-color: rgb(var(--colors-green));
+}
+
 * {
-  user-select: none;
   border: none;
   outline: none;
   list-style: none;

@@ -1,23 +1,11 @@
 :root {
   /* colors */
-  --colors-primary: 175, 111, 43;
-  --colors-primary-dark: 152, 96, 36;
-  --colors-primary-darker: 135, 86, 53;
-
-  --colors-action-default: #f2c409;
-  --colors-action-dark: #e59400;
-
-  --colors-card-border: #c2b2a5;
-  --colors-card-canvas: #b8a99e;
-  --colors-card-stats: #83776d;
-  --colors-card-bar: #645b53;
-  --colors-card-background: 51, 35, 31;
-
-  --colors-card-stats-str: #c56456;
-  --colors-card-stats-dex: #b48847;
-  --colors-card-stats-dur: #4b7c54;
-  --colors-card-stats-int: #3f807c;
-  --colors-card-stats-cha: #803f72;
+  --colors-green: 238, 254, 125;
+  --colors-green-active: 218, 234, 105;
+  --colors-teal: 95, 208, 180;
+  --colors-pink: 255, 156, 221;
+  --colors-blue: 112, 172, 254;
+  --colors-purple: 200, 145, 243;
 
   --colors-dark-default: #000;
   --colors-dark-100: #0d0d0f;
@@ -41,12 +29,6 @@
   --colors-light-800: #838484;
   --colors-light-900: #78797a;
 
-  /* typography */
-
-  /* utils */
-  --utils-header-height: 96px;
-  --utils-sidebar-width: 246px;
-
   /* misc */
   --misc-radius-xs: 4px;
   --misc-radius-s: 6px;
@@ -57,6 +39,5 @@
   --misc-radius-rounded: 100%;
 
   /* animations */
-  --transition-func: cubic-bezier(0.17, 0.67, 0, 1);
-  --transition-func-alternative: cubic-bezier(0.32, 0.94, 0.6, 1);
+  --transition-curve: cubic-bezier(0.62, 0.05, 0.01, 0.99);
 }
