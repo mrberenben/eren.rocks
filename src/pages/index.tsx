@@ -12,6 +12,7 @@ import Canvas from "@/components/canvas";
 
 // config
 import { Tech } from "@/utils/config/tech";
+import Marquee from "@/components/marquee";
 
 const Home: NextPage = () => {
   return (
@@ -40,8 +41,18 @@ const Home: NextPage = () => {
             <h1>Frontend Developer</h1>
             <h2>(FOR REAL)</h2>
             <p>
-              Hey there, my name is Eren. I'm a 21 years old frontend developer
-              who loves to code and live in Istanbul/Turkey.
+              <span>Hey there! My name is Eren. I am a</span>
+              <span>21-year-old frontend developer who started</span>
+              <span>
+                learning 7 years ago. Founder of
+                <a
+                  href="https://kervan.design/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  kervan.design
+                </a>
+              </span>
             </p>
 
             <Button hasShadow>Hire me</Button>
@@ -76,6 +87,10 @@ const Home: NextPage = () => {
               </div>
             </div>
           </Canvas>
+        </section>
+
+        <section className={styles.section_contact}>
+          <Marquee text="LET'S TALK" />
         </section>
       </main>
 

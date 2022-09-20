@@ -25,7 +25,7 @@ const Tech = [
   },
   {
     id: 4,
-    title: "CSS Preprocessors",
+    title: "Sass/modules",
     image: require("@/assets/images/sass.png"),
     experience: "4 years"
   }

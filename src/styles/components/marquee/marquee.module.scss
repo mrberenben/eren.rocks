@@ -1,0 +1,67 @@
+.marquee_wrapper {
+  --background: var(--colors-purple);
+
+  position: relative;
+  display: flex;
+
+  inline-size: 100%;
+  padding-block: 1rem;
+
+  border: 4px solid #000;
+  border-radius: var(--misc-radius-m);
+  background-color: rgb(var(--background));
+
+  overflow: hidden;
+
+  & .noise {
+    position: absolute;
+    inset: 0;
+
+    inline-size: 100%;
+    block-size: 100%;
+
+    background-image: url("../../../assets/images/noise.webp");
+    background-repeat: repeat;
+    background-color: rgb(var(--background));
+
+    mix-blend-mode: color-burn;
+    opacity: 0.2;
+
+    z-index: 3;
+    user-select: none;
+  }
+
+  & .marquee {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+
+    animation: marquee_scroll 45s linear infinite;
+
+    & .marquee_inner {
+      display: flex;
+      white-space: nowrap;
+
+      padding-inline: 0.5em;
+
+      color: #fff;
+      font-size: 3.5vw;
+      font-weight: normal;
+      font-family: "Tusker Grotesk 8";
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: 0.08em 0.08em 0 #000;
+      -webkit-text-stroke-width: max(2px, 0.04em);
+      -webkit-text-stroke-color: #000;
+    }
+  }
+}
+
+@keyframes marquee_scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(-100%);
+  }
+}
