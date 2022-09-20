@@ -9,4 +9,8 @@
   will-change: top, left;
   pointer-events: none;
   z-index: 100;
+
+  @media screen and (hover: none) and (pointer: coarse) {
+    display: none;
+  }
 }

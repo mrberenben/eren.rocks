@@ -56,7 +56,7 @@ const Home: NextPage = () => {
             </p>
 
             <Button
-              hasShadow
+              shadow={true}
               onClick={() =>
                 window.location.replace("mailto:mrberenben@gmail.com")
               }
