@@ -7,12 +7,15 @@
   flex-direction: column;
 
   inline-size: 100%;
-  block-size: 100%;
 
   border: 4px solid #000;
   border-radius: var(--misc-radius-m);
   background-color: rgb(var(--background));
   overflow: hidden;
+
+  &[data-shuffle="true"] {
+    padding-block-end: 70%;
+  }
 
   & .noise {
     position: absolute;
@@ -43,12 +46,17 @@
     top: 100%;
     left: 50%;
 
-    inline-size: 300%;
-    block-size: 300%;
+    inline-size: 900%;
+    block-size: 900%;
 
     z-index: 1;
     user-select: none;
     pointer-events: none;
+
+    @media screen and (max-width: 576px) {
+      inline-size: 1200%;
+      block-size: 1200%;
+    }
 
     & svg {
       animation: spin 23s linear infinite;

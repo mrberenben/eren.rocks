@@ -55,7 +55,14 @@ const Home: NextPage = () => {
               </span>
             </p>
 
-            <Button hasShadow>Hire me</Button>
+            <Button
+              shadow={true}
+              onClick={() =>
+                window.location.replace("mailto:mrberenben@gmail.com")
+              }
+            >
+              Hire me
+            </Button>
           </div>
           <div className={styles.section_banner_right}>
             <Canvas shuffle={true} rainbow={true} noise={true} stripes={false}>
@@ -93,6 +100,47 @@ const Home: NextPage = () => {
           <Marquee text="LET'S TALK" />
         </section>
       </main>
+
+      <footer className={styles.footer}>
+        <ul className={styles.social}>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/erenkulis/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Linkedin
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/mrberenben/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Github
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/mrberenben/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Instagram
+            </a>
+          </li>
+        </ul>
+
+        <a
+          href="https://kervan.design/"
+          target="_blank"
+          rel="noreferrer noopener"
+          className={styles.my_company}
+        >
+          kervan.design
+        </a>
+      </footer>
 
       <Cursor />
     </div>

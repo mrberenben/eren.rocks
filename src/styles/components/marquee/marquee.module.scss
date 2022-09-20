@@ -13,6 +13,11 @@
 
   overflow: hidden;
 
+  &:hover .marquee_inner {
+    transform: translate(-2px, -2px);
+    text-shadow: 0.1em 0.1em 0 #000 !important;
+  }
+
   & .noise {
     position: absolute;
     inset: 0;
@@ -53,6 +58,14 @@
       text-shadow: 0.08em 0.08em 0 #000;
       -webkit-text-stroke-width: max(2px, 0.04em);
       -webkit-text-stroke-color: #000;
+
+      transition: 150ms transform var(--transition-curve),
+        150ms text-shadow var(--transition-curve);
+      will-change: transform, text-shadow;
+
+      @media screen and (max-width: 768px) {
+        font-size: 24px;
+      }
     }
   }
 }

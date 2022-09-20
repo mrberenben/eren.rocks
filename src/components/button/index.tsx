@@ -3,9 +3,10 @@ import styles from "@/styles/components/button/button.module.scss";
 type ButtonProps = {
   type?: "button" | "submit";
   title?: string;
-  hasShadow?: boolean;
+  shadow?: boolean;
   size?: "xs" | "sm" | "md" | "lg" | "xl";
   children: React.ReactNode;
+  [x: string]: any;
 };
 
 const Button = (props: ButtonProps) => {
@@ -16,8 +17,9 @@ const Button = (props: ButtonProps) => {
       aria-label={props.title}
       data-size={props.size || "md"}
       className={`${styles.button} ${
-        props.hasShadow ? styles.button__shadow : undefined
+        props.hasshadow ? styles.button__shadow : undefined
       }`}
+      {...props}
     >
       {props.children}
     </button>
