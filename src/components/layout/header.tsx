@@ -10,7 +10,12 @@ const Header: React.FC<{}> = () => {
       </Link>
 
       <nav role="navigation" className={styles.nav}>
-        <Button size="xs">let's talk</Button>
+        <Button
+          size="xs"
+          onClick={() => window.location.replace("mailto:mrberenben@gmail.com")}
+        >
+          let's talk
+        </Button>
       </nav>
     </header>
   );
