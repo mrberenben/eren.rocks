@@ -17,7 +17,7 @@ const Button = (props: ButtonProps) => {
       aria-label={props.title}
       data-size={props.size || "md"}
       className={`${styles.button} ${
-        props.hasshadow ? styles.button__shadow : undefined
+        props.shadow ? styles.button__shadow : undefined
       }`}
       {...props}
     >
