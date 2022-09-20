@@ -1,4 +1,3 @@
-import { useRef, useState } from "react";
 import styles from "@/styles/components/marquee/marquee.module.scss";
 
 type MarqueeProps = {
@@ -6,10 +5,11 @@ type MarqueeProps = {
 };
 
 const Marquee = (props: MarqueeProps) => {
-  const MarqueeRef = useRef<HTMLDivElement>(null);
-
   return (
-    <div ref={MarqueeRef} className={styles.marquee_wrapper}>
+    <div
+      className={styles.marquee_wrapper}
+      onClick={() => window.location.replace("mailto:mrberenben@gmail.com")}
+    >
       <span className={styles.noise} />
       <div className={styles.marquee}>
         <div className={styles.marquee_inner}>{props.text}</div>

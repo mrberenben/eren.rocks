@@ -6,6 +6,7 @@ type ButtonProps = {
   hasShadow?: boolean;
   size?: "xs" | "sm" | "md" | "lg" | "xl";
   children: React.ReactNode;
+  [x: string]: any;
 };
 
 const Button = (props: ButtonProps) => {
@@ -18,6 +19,7 @@ const Button = (props: ButtonProps) => {
       className={`${styles.button} ${
         props.hasShadow ? styles.button__shadow : undefined
       }`}
+      {...props}
     >
       {props.children}
     </button>

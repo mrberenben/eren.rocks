@@ -52,11 +52,12 @@ const Cursor: React.FC<{}> = () => {
   useEventListener("mousemove", handleMouseMove, Document);
   useEventListener("mousedown", handleMouseDown, Document);
   useEventListener("mouseup", handleMouseUp, Document);
-  // useEventListener(
-  //   "contextmenu",
-  //   (e: MouseEvent) => e.preventDefault(),
-  //   Document
-  // );
+  useEventListener(
+    "contextmenu",
+    (e: MouseEvent) =>
+      process.env.NODE_ENV !== "development" && e.preventDefault(),
+    Document
+  );
 
   // handle mouse enter/leave
   useEffect(() => {

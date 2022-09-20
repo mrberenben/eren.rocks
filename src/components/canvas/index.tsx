@@ -66,7 +66,7 @@ const Canvas = (props: CanvasProps) => {
   );
 
   return (
-    <div ref={CanvasRef} className={styles.canvas}>
+    <div ref={CanvasRef} className={styles.canvas} data-shuffle={props.shuffle}>
       {props.noise && <span className={styles.noise} />}
       {props.stripes && (
         <span className={styles.stripes}>
