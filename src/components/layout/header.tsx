@@ -12,7 +12,7 @@ const Header: React.FC<{}> = () => {
       <nav role="navigation" className={styles.nav}>
         <Button
           size="xs"
-          onClick={() => window.location.replace("mailto:mrberenben@gmail.com")}
+          onClick={() => window.location.replace("mailto:hello@eren.jp")}
         >
           let's talk
         </Button>

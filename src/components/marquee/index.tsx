@@ -8,7 +8,7 @@ const Marquee = (props: MarqueeProps) => {
   return (
     <div
       className={styles.marquee_wrapper}
-      onClick={() => window.location.replace("mailto:mrberenben@gmail.com")}
+      onClick={() => window.location.replace("mailto:hello@eren.jp")}
     >
       <span className={styles.noise} />
       <div className={styles.marquee}>

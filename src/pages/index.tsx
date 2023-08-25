@@ -22,11 +22,11 @@ const Home: NextPage = () => {
         <meta charSet="utf-8" />
         <meta
           name="description"
-          content="eren.rocks | Personal website of Eren Kuliş. A 21 years old frontend developer from Istanbul/Turkey."
+          content="eren.jp | Personal website of Eren Kuliş. A 22 years old frontend developer from Istanbul/Turkey."
         />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
         />
         <meta name="theme-color" content="#fff" />
         <link rel="icon" href="/favicon.ico" />
@@ -42,24 +42,13 @@ const Home: NextPage = () => {
             <h2>(FOR REAL)</h2>
             <p>
               <span>Hey there! My name is Eren. I am a</span>
-              <span>21-year-old frontend developer who started</span>
-              <span>
-                learning 7 years ago. Founder of
-                <a
-                  href="https://kervan.design/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  kervan.design
-                </a>
-              </span>
+              <span>22-years-old frontend developer who started</span>
+              <span>learning 8 years ago.</span>
             </p>
 
             <Button
               shadow={true}
-              onClick={() =>
-                window.location.replace("mailto:mrberenben@gmail.com")
-              }
+              onClick={() => window.location.replace("mailto:hello@eren.jp")}
             >
               Hire me
             </Button>
@@ -132,14 +121,14 @@ const Home: NextPage = () => {
           </li>
         </ul>
 
-        <a
+        {/* <a
           href="https://kervan.design/"
           target="_blank"
           rel="noreferrer noopener"
           className={styles.my_company}
         >
           kervan.design
-        </a>
+        </a> */}
       </footer>
 
       <Cursor />
