@@ -218,6 +218,8 @@
         border-radius: var(--misc-radius-s);
         box-shadow: 3px 3px #000;
 
+        color: var(--colors-dark-200);
+
         transition: 150ms transform var(--transition-curve),
           150ms box-shadow var(--transition-curve);
         will-change: transform, box-shadow;

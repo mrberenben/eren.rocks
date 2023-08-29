@@ -13,6 +13,7 @@ import Canvas from "@/components/canvas";
 // config
 import { Tech } from "@/utils/config/tech";
 import Marquee from "@/components/marquee";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -46,12 +47,13 @@ const Home: NextPage = () => {
               <span>learning 8 years ago.</span>
             </p>
 
-            <Button
-              shadow={true}
-              onClick={() => window.location.replace("mailto:hello@eren.jp")}
+            <a
+              href="https://linkedin.com/in/erenkulis"
+              target="_blank"
+              rel="norefeerer noopenner"
             >
-              Hire me
-            </Button>
+              <Button shadow={true}>Hire me</Button>
+            </a>
           </div>
           <div className={styles.section_banner_right}>
             <Canvas shuffle={true} rainbow={true} noise={true} stripes={false}>
@@ -68,7 +70,13 @@ const Home: NextPage = () => {
 
               <div className={styles.tech_grid}>
                 {Tech.map(t => (
-                  <div key={t.id} className={styles.tech_grid_card}>
+                  <a
+                    key={t.id}
+                    href={t.path}
+                    target="_blank"
+                    rel="norefeerer noopenner"
+                    className={styles.tech_grid_card}
+                  >
                     <span className={styles.tech_grid_card__badge}>
                       {t.experience}
                     </span>
@@ -78,7 +86,7 @@ const Home: NextPage = () => {
                     <div className={styles.tech_grid_card__title}>
                       {t.title}
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
